@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Reface.AppStarter.UnitTests</id>
+    <version>1.0.0</version>
+    <title>Reface.AppStarter.UnitTests</title>
+    <authors>ShimizuShiori</authors>
+    <owners>ShimizuShiori</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/ShimizuShiori/Reface.AppStarter.UnitTest</projectUrl>
+    <description>基于 Reface.AppStarter 单元测试</description>
+    <copyright>Copyright 2020</copyright>
+    <tags>Reface AppModule UnitTest</tags>
+  </metadata>
+</package>
