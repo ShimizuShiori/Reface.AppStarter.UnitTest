@@ -66,7 +66,10 @@ namespace Reface.AppStarter.UnitTests
         public void Cleanup()
         {
             ComponentContainer.Dispose();
+            this.OnComponentContainerDiposed();
         }
+
+        protected virtual void OnComponentContainerDiposed() { }
     }
 
 

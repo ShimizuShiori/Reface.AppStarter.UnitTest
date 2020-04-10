@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Reface.AppStarter.UnitTestsTests.Services
 {
-    public interface IService
+    public interface IService : IDisposable
     {
     }
 }

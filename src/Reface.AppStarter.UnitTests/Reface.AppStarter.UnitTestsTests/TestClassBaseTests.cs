@@ -2,6 +2,7 @@
 using Reface.AppStarter.Attributes;
 using Reface.AppStarter.UnitTestsTests;
 using Reface.AppStarter.UnitTestsTests.Services;
+using System;
 
 namespace Reface.AppStarter.UnitTests.Tests
 {
@@ -28,6 +29,11 @@ namespace Reface.AppStarter.UnitTests.Tests
         public void ServiceIsDefaultService()
         {
             Assert.IsInstanceOfType(this.Service, typeof(DefaultService));
+        }
+
+        protected override void OnComponentContainerDiposed()
+        {
+            Console.WriteLine($"{nameof(TestClassBaseTests)}.{nameof(OnComponentContainerDiposed)}");
         }
     }
 }
