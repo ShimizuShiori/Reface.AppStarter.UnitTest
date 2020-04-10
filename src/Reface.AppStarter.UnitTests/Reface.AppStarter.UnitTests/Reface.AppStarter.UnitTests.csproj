@@ -50,7 +50,7 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Reface.AppStarter, Version=0.10.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Reface.AppStarter.1.2.1\lib\net461\Reface.AppStarter.dll</HintPath>
+      <HintPath>..\packages\Reface.AppStarter.1.6.0\lib\net461\Reface.AppStarter.dll</HintPath>
     </Reference>
     <Reference Include="Reface.CommandBus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Reface.CommandBus.1.1.1\lib\net461\Reface.CommandBus.dll</HintPath>
@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\AutoCreateAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestClassBase.cs" />
   </ItemGroup>
@@ -82,7 +83,9 @@
     <None Include="packages.config" />
     <None Include="Reface.AppStarter.UnitTests.nuspec" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Errors\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
