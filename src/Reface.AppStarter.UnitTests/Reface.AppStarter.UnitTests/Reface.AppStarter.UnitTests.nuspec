@@ -2,10 +2,10 @@
 <package >
   <metadata>
     <id>Reface.AppStarter.UnitTests</id>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
     <title>Reface.AppStarter.UnitTests</title>
-    <authors>ShimizuShiori</authors>
-    <owners>ShimizuShiori</owners>
+    <authors>Felix</authors>
+    <owners>Felix</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/ShimizuShiori/Reface.AppStarter.UnitTest</projectUrl>
