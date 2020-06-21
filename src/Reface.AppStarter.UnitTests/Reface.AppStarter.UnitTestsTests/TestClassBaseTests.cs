@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Reface.AppStarter.Attributes;
 using Reface.AppStarter.UnitTestsTests;
 using Reface.AppStarter.UnitTestsTests.Services;
 using System;
@@ -10,8 +9,9 @@ namespace Reface.AppStarter.UnitTests.Tests
     [TestClass]
     public class TestClassBaseTests : TestClassBase
     {
-        [AutoCreate]
         public IService Service { get; set; }
+
+        public IServiceHasNoImplementor ServiceHasNoImplementor { get; set; }
 
         [TestMethod]
         public void MyTestMethod()
@@ -30,6 +30,13 @@ namespace Reface.AppStarter.UnitTests.Tests
         {
             Assert.IsInstanceOfType(this.Service, typeof(DefaultService));
         }
+
+        [TestMethod]
+        public void TestServiceHasNoImplementorIsNull()
+        {
+            Assert.IsNull(this.ServiceHasNoImplementor);
+        }
+
 
         protected override void OnComponentContainerDiposed()
         {

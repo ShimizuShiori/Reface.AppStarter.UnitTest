@@ -34,13 +34,14 @@ namespace Reface.AppStarter.UnitTests
             this.App = setup.Start(appModule);
             IComponentContainer componentContainer = this.App.GetAppContainer<IComponentContainer>();
             ComponentContainer = componentContainer.BeginScope("TEST");
-            foreach (var prop in this.GetType().GetProperties())
-            {
-                var attr = prop.GetCustomAttribute<AutoCreateAttribute>();
-                if (attr == null) continue;
+            componentContainer.InjectProperties(this);
+            //foreach (var prop in this.GetType().GetProperties())
+            //{
+            //    var attr = prop.GetCustomAttribute<AutoCreateAttribute>();
+            //    if (attr == null) continue;
 
-                prop.SetValue(this, this.ComponentContainer.CreateComponent(prop.PropertyType));
-            }
+            //    prop.SetValue(this, this.ComponentContainer.CreateComponent(prop.PropertyType));
+            //}
             this.OnAppStarted();
         }
 
